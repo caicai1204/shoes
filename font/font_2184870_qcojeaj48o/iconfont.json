@@ -1,0 +1,16 @@
+{
+  "id": "2184870",
+  "name": "shoes-20.11.6",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "名鞋库图标",
+  "glyphs": [
+    {
+      "icon_id": "1089767",
+      "name": "三角",
+      "font_class": "sanjiao",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    }
+  ]
+}
