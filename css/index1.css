@@ -1,0 +1,110 @@
+body,
+ul,
+dl,
+dt,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+table,
+fieldset,
+legend,
+figure,
+figcaption,
+menu,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+input,
+a {
+    outline: none;
+}
+
+
+/* 以上内容为样式重置 */
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+header,
+menu,
+.header-top,
+.header-bottom,
+.content-center,
+.content-bottom,
+nav,
+.footer {
+    margin: 0 auto;
+}
+
+
+/* header 头部 */
+
+header {
+    height: 102px;
+    background: #eeeeee;
+}
+
+
+/* header-top */
+
+.header-top {
+    width: 990px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 25px;
+    color: #666666;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: "宋体";
+}
+
+.header-top ul {
+    width: 960px;
+    height: 25px;
+    float: left;
+}
