@@ -708,7 +708,7 @@ footer .footer figure:nth-child(2) {
 }
 
 
-/* copyright */
+/* copyright 版权信息 */
 
 .copyright {
     height: 146px;
@@ -716,23 +716,30 @@ footer .footer figure:nth-child(2) {
     text-align: center;
     overflow: hidden;
 }
-
+/* p部分 */
 .copyright p {
-    font-size: 12px;
+    width: 1110px;
+    /* background: yellowgreen; */
+    margin: 0 auto;
+  
     line-height: 22px;
     color: #777777;
     margin-top: 16px;
 }
 
 .copyright p a {
-    color: #777777;
+    color: #777777;  font-size: 12px;
+    line-height: 12px;
+    display:inline-block;
 }
-
+.copyright p span{
+    padding: 0 13px;
+}
 .copyright p a:hover {
     color: #000;
     text-decoration: underline;
 }
-
+/* b部分 */
 .copyright b {
     font-size: 8px;
     line-height: 22px;
@@ -758,20 +765,23 @@ footer .footer figure:nth-child(2) {
 .copyright b img {
     display: inline;
 }
-
-.copyright div {
-    display: flex;
-    justify-content: center;
+/* row03 */
+.copyright .row03{
+    width: 640px;
+    height: 50px;
+   margin:0 auto;
+   margin-top: 20px;
+   margin-bottom: 30px;
 }
 
-.copyright div a {
-    display: block;
-    width: 127px;
+.copyright .row03 a {
+    float: left;
+    width: 112px;
     height: 47px;
-    margin: 20px 15px 0 0;
+    margin-right: 10px;
 }
 
-.copyright div a img:hover {
+.copyright .row03 a img:hover {
     border-top: 1px solid #f8f8f8;
     border-left: 1px solid #f8f8f8;
 }
