@@ -84,7 +84,10 @@ nav,
 
 
 /* header 头部 */
-
+body{
+    
+    margin: 0 auto;
+}
 header {
     height: 102px;
     background: #eeeeee;
@@ -335,6 +338,7 @@ header {
 .nav {
     height: 34px;
     background: #a21f25;
+    margin: 0 auto;
 }
 
 nav {
@@ -463,31 +467,187 @@ nav p a:hover {
 }
 
 
-/* banner */
+/* banner 紫色背景 */
+.xiaoye {
+    background: url(../img/bgse.jpg) repeat ;
+}
+
+.xiaoye .pagemain .carnival img,
+.xiaoye .pagemain .hotsale img,
+.xiaoye .pagemain .newproduct img,
+.xiaoye .pagemain .clearance img,
+.xiaoye .pagemain .hishopping img,
+.xiaoye .pagemain .fallwinter img,
+.xiaoye .pagemain .tideproduct img,
+.xiaoye .pagemain .hotalbum img,
+.xiaoye .pagemain .jacket img,
+.xiaoye .pagemain .pants img,
+.xiaoye .pagemain .running img,
+.xiaoye .pagemain .leisure img,
+.xiaoye .pagemain .children img,
+.xiaoye .pagemain .bags img{
+   height: 100%;
+   width: 1905px;
+   margin: 0 auto;
+   opacity: 0.6;
+}
 
 /* 狂欢盛典 */
 .xiaoye .pagemain .carnival{
     height: 890px;
 }
 
-/* 热卖专区 */
+/* 1. 热卖专区 */
 .xiaoye .pagemain .hotsale{
     height: 1302px;
+    position: relative;
 }
 
-/* 新品专区 */
+    
+    /* 公共部分:黄色+定位+flex */
+
+    /* 热卖 */
+.pagemain .hotsale  .hotmap_top,
+.pagemain .hotsale  .hotmap_bottom,
+    /* 新品 */
+.pagemain .newproduct .new_move,
+.pagemain .newproduct .new_map,
+    /* 清仓 */
+.pagemain .clearance .clear_move,
+.pagemain .clearance .clear_map,
+    /* 嗨购 */
+.pagemain .hishopping .hi_map_top,
+.pagemain .hishopping .hi_map_bottom
+{
+    border: 1px solid black;
+    background: yellow;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-content: space-between;
+    opacity: 0.4;
+    /*  */
+}
+    /* 热卖 */
+.pagemain .hotsale  .hotmap_top a,
+.pagemain .hotsale  .hotmap_bottom a,
+    /* 新品· */
+.pagemain .newproduct .new_map a,
+    /*  清仓 */
+.pagemain .clearance .clear_map a
+    /* 嗨购 */
+.pagemain .hishopping .hi_map_bottom a
+{
+    display: block;
+    border: 1px solid blue;
+    background: red;
+    opacity: 0.7;
+    /*  */
+}
+
+    /* 各自属性 */
+/* 热卖定位map  top + bottom*/
+    .pagemain .hotsale  .hotmap_top{
+        width:900px;
+        height:352px ;
+        top: 130px;
+        left: 505px;
+    }
+
+    .pagemain .hotsale  .hotmap_top a{
+        width: 160px;
+        height: 160px;
+    }
+
+    .pagemain .hotsale  .hotmap_bottom{
+        width:856px;
+        height:300px ;
+        top:835px;
+        left: 410px;
+    }
+    .pagemain .hotsale  .hotmap_bottom a{
+        width:420px;
+        height: 300px;
+    }
+/* 2. 新品专区 */
 .xiaoye .pagemain .newproduct{
     height: 2711px;
+    position: relative;
 }
-/* 清仓专区 */
+    /* 新品move */
+.pagemain .newproduct .new_move,
+.pagemain .clearance .clear_move{
+    width:860px;
+    height:352px ;
+}
+    /* 新品定位 */
+    .pagemain .newproduct .new_move{
+        top: 10px;
+        left: 505px;
+    }
+    .pagemain .newproduct .new_map{
+        width:912px;
+        height:2255px ;
+        top: 375px;
+        left:496px;
+    }
+    .pagemain .newproduct .new_map a{
+        width:285px;
+        height:535px ;
+        top: 375px;
+        left:496px;
+    }
+
+/* 3. 清仓专区 */
 .xiaoye .pagemain .clearance{
     height: 2113px;
+    position: relative;
 }
+    /* 清仓定位 */
+    .pagemain .clearance .clear_move{
+        top: 0px;
+        left: 505px;
+    }
+    .pagemain .clearance .clear_map{
+        width:912px;
+        height:1660px ;
+        top: 370px;
+        left:496px;
+    }
+    .pagemain .clearance .clear_map a{
+        width:285px;
+        height:535px ;
+        top: 375px;
+        left:496px;
+    }
 
 /* 热卖嗨购 */
 .xiaoye .pagemain .hishopping{
     height: 3116px;
+    position: relative;
 }
+    /* 嗨购 定位 */
+    .pagemain .hishopping .hi_map_top{
+        width:950px;
+        height:460px ;
+        top:350 px;
+        left:496px;
+    }
+    .pagemain .hishopping .hi_map_bottom{
+        width:912px;
+        height:2255px ;
+        top: 820px;
+        left:496px;
+    }
+    /* .pagemain .hishopping .hi_map_bottom a{
+        width:285px;
+        height:535px ;
+        top: 375px;
+        left:496px;
+    } */
+
+
 /* 秋冬新品 */
 .xiaoye .pagemain .fallwinter{
     height: 3122px;
