@@ -1,0 +1,245 @@
+body,
+ul,
+dl,
+dt,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+table,
+fieldset,
+legend,
+figure,
+figcaption,
+menu,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+input,
+a {
+    outline: none;
+}
+
+
+/* 以上内容为样式重置 */
+html,
+body {
+    height: 100%;
+}
+
+body,
+header,
+main,
+.header-top,
+.header-bottom,
+.content-center,
+.content-bottom,
+nav,
+.footer {
+    margin: 0 auto;
+    width: 990px;
+}
+
+
+body{
+    margin: 0 auto;
+}
+/* 头部 */
+header{
+    height: 73px;
+    padding: 20px 0;
+    background-color: yellowgreen;
+}
+/* main */
+main{
+    height: 428px;
+    background: wheat;
+}
+    /* main_left */
+main .form_left img{
+    float: left;
+    width: 380px;
+    height: 380px;
+    padding: 24px 0;
+}
+    /* main_right */
+main .form_right{
+    width: 450px;
+    height: 428px;
+    margin: 0 72px;
+    float: left;
+}
+main .form_right .login{
+    width: 450px;
+    height: 28px;
+}
+main .form_right .bot{
+    width: 450px;
+    height: 400px;
+    background: lightgoldenrodyellow;
+}
+main .form_right .sqr{
+    width: 85%;
+    height: 317px;
+    color: #666;
+    background: #fafafa;
+    border: 1px solid #eee;
+    box-shadow: 3px 3px #F5F5F5;
+}
+main .form_right .sqr .auto{
+    width:306px;
+    height: 317px;
+    margin: 0 auto;
+}
+main .form_right .sqr .auto .p1,.p2,.p3,.p4,.p5,.p6{
+    width: 306px;
+    display: block;
+    padding-top: 15px;
+}
+main .form_right .sqr .auto .p1{
+    height: 20px;
+    background: brown;
+}
+main .form_right .sqr .auto .p2{
+    height:30x;
+    line-height: 30px;
+    background: cornflowerblue;
+    padding-top: 0;
+}
+main .form_right .sqr .auto span{
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-align: right;
+    width: 60px;
+    height: 30px;
+    padding: 0;
+}
+main .form_right .sqr .auto input{
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+}
+
+main .form_right .sqr .auto .p3{
+    height: 30px;
+    background: cornsilk;
+}
+main .form_right .sqr .auto .p3 span{
+    line-height: 30px;
+}
+main .form_right .sqr .auto .p3 input{
+    float: left;
+    height: 22px;
+}
+
+main .form_right .sqr .auto .p4{
+    height: 56px;
+    background: darkkhaki;
+}
+main .form_right .sqr .auto .p4 span{
+    height: 56px;
+    line-height: 56px;
+}
+main .form_right .sqr .auto .p4 input{
+    float: left;
+    width: 65px;
+    height: 22px;
+}
+main .form_right .sqr .auto .p4 .code{
+    width: 150px;
+    height: 56px;
+    background: coral;
+    display: flex;
+    flex-direction: column;
+}
+main .form_right .sqr .auto .p4 .code .tu{
+    display: flex;
+    flex-direction: row;
+}
+main .form_right .sqr .auto .p4 .code img{
+    width: 60px;
+    height: 26px;
+    background: cadetblue;
+}
+main .form_right .sqr.auto .p4 .code a {
+    display: block;
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+}
+
+main .form_right .sqr .auto .p5{
+    width: 306px;
+    height: 38px;
+    background:darksalmon;
+    padding-top: 20px;
+}
+main .form_right .sqr .auto .p5{
+
+}
+
+main .form_right .sqr .auto .p6{
+    height: 61px;
+    background:gold;
+}
+
+main .form_right .bot .cont{
+    width: 80%;
+    height: 82px;
+    background: lightskyblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+

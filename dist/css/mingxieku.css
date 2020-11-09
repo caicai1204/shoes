@@ -85,7 +85,6 @@ nav,
 
 /* header 头部 */
 body{
-    
     margin: 0 auto;
 }
 header {
@@ -532,8 +531,7 @@ nav p a:hover {
 .pagemain .hotalbum .hot_map_bottom,
 .pagemain .hotalbum .hot_map_bottom1,
 .pagemain .hotalbum .hot_map_bottom2,
-.pagemain .hotalbum .hot_map_bottom3
-{
+.pagemain .hotalbum .hot_map_bottom3{
     border: 1px solid black;
     background: yellow;
     position: absolute;
@@ -544,6 +542,13 @@ nav p a:hover {
     opacity: 0.4;
     /*  */
 }
+.pagemain .hotalbum .hot_map_bottom1,
+.pagemain .hotalbum .hot_map_bottom2,
+.pagemain .hotalbum .hot_map_bottom3{
+    justify-content:space-around;
+    align-content: space-around;
+}
+
     /* 热卖 */
 .pagemain .hotsale  .hotmap_top a,
 .pagemain .hotsale  .hotmap_bottom a,
@@ -561,7 +566,9 @@ nav p a:hover {
 .pagemain .hotalbum .hot_map_top a,
 .pagemain .hotalbum .hot_map_bottom1 a,
 .pagemain .hotalbum .hot_map_bottom2 a,
-.pagemain .hotalbum .hot_map_bottom3 a{
+.pagemain .hotalbum .hot_map_bottom3 a,
+    /* 8. */
+.xiaoye .pagemain .jacket_prod_list a{
     display: block;
     border: 1px solid blue;
     background: red;
@@ -600,7 +607,7 @@ nav p a:hover {
 .xiaoye .pagemain .hishopping,
 .xiaoye .pagemain .fallwinter,
 .xiaoye .pagemain .tideproduct,
-.xiaoye .pagemain .hotalbum{
+.xiaoye .pagemain .hotalbum {
     position: relative;
 }
 
@@ -613,7 +620,8 @@ nav p a:hover {
 .pagemain .newproduct .new_move,
 .pagemain .clearance .clear_move,
 .pagemain .fallwinter .fall_move,
-.pagemain .tideproduct .tide_move{
+.pagemain .tideproduct .tide_move
+{
     width:860px;
     height:352px ;
 }
@@ -710,6 +718,7 @@ nav p a:hover {
 .xiaoye .pagemain .hotalbum{
     height:2107px;
 }
+    /* HOT top */
 .pagemain .hotalbum .hot_map_top{
     width: 930px;
     height: 830px;
@@ -720,23 +729,78 @@ nav p a:hover {
     width: 450px;
     height: 400px;
 }
+    /* HOT bottom */
+.pagemain .hotalbum .hot_map_bottom{
+    width: 920px;
+    height: 360px;
+    position: absolute;
+    top: 1380px;
+    left: 490px;
+}
+.pagemain .hotalbum .hot_map_bottom1,
+.pagemain .hotalbum .hot_map_bottom2{
+    width: 310px;
+    height: 360px;
+}
+.pagemain .hotalbum .hot_map_bottom2{
+    position: absolute;
+    top: 0;
+    left: 350px;
+}
+.pagemain .hotalbum .hot_map_bottom3{
+    width: 130px;
+    height: 140px;
+    position: absolute;
+    top: 110px;
+    left: 745px;
+}
+.pagemain .hotalbum .hot_map_bottom1 a,
+.pagemain .hotalbum .hot_map_bottom2 a,
+.pagemain .hotalbum .hot_map_bottom3 a{
+    width: 130px;
+    height: 60px;
+}
+.pagemain .hotalbum .hot_map_bottom3 a{
+    width: 175px;
+}
+
+
 
 /* 8. 卫衣外套 */
 .xiaoye .pagemain .jacket{
+    /* position: relative; */
+}
+.xiaoye .pagemain .jacket_move{
+    width: 990px;
     height: 379px;
+    background: yellow;
+    opacity: 0.5;
+    /* position: absolute; */
+    /* left: 350px; */
 }
+
 /* 卫衣外套_商品 */
-.xiaoye .pagemain .jacket_prod{
-    height: 1813px;
-    background-color: plum;
+.xiaoye .pagemain .jacket_prod_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    background: yellow;
+    opacity: 0.5;
 }
+
+
 .xiaoye .pagemain .jacket_prod_list{
     width: 990px;
-    height: 1811px;
+    height: 1813px;  
     border: 1px solid black;
     margin:0 auto;
 }
 
+.xiaoye .pagemain .jacket_prod_list a{
+    width: 237px;
+    height: 282px;
+}
 /* 9. 运动长裤 */
 .xiaoye .pagemain .pants{
     height: 366px;
