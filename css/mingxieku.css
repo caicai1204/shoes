@@ -506,18 +506,33 @@ nav p a:hover {
     
     /* 公共部分:黄色+定位+flex */
 
-    /* 热卖 */
+    /* 1.热卖 */
 .pagemain .hotsale  .hotmap_top,
 .pagemain .hotsale  .hotmap_bottom,
-    /* 新品 */
+    /* 2.新品 */
 .pagemain .newproduct .new_move,
 .pagemain .newproduct .new_map,
-    /* 清仓 */
+    /* 3.清仓 */
 .pagemain .clearance .clear_move,
 .pagemain .clearance .clear_map,
-    /* 嗨购 */
+    /* 4.嗨购 */
 .pagemain .hishopping .hi_map_top,
-.pagemain .hishopping .hi_map_bottom
+.pagemain .hishopping .hi_map_bottom,
+    /* 5.秋冬 */
+.pagemain .fallwinter .fall_move,
+.pagemain .fallwinter .fall_map_top,
+.pagemain .fallwinter .fall_map_bottom,
+    /* 6.潮品 */
+.pagemain .tideproduct .tide_move,
+.pagemain .tideproduct .tide_map_top,
+.pagemain .tideproduct .tide_map_bottom,
+    /* 7. HOT ALBUM */
+.pagemain .hotalbum .hot_move,
+.pagemain .hotalbum .hot_map_top,
+.pagemain .hotalbum .hot_map_bottom,
+.pagemain .hotalbum .hot_map_bottom1,
+.pagemain .hotalbum .hot_map_bottom2,
+.pagemain .hotalbum .hot_map_bottom3
 {
     border: 1px solid black;
     background: yellow;
@@ -535,10 +550,18 @@ nav p a:hover {
     /* 新品· */
 .pagemain .newproduct .new_map a,
     /*  清仓 */
-.pagemain .clearance .clear_map a
+.pagemain .clearance .clear_map a,
     /* 嗨购 */
-.pagemain .hishopping .hi_map_bottom a
-{
+.pagemain .hishopping .hi_map_bottom a,
+    /* 5.秋冬 */
+.pagemain .fallwinter .fall_map_bottom a,
+    /* 6.潮品 */
+.pagemain .tideproduct .tide_map_bottom a,
+    /* 7.HOT ALBUM */
+.pagemain .hotalbum .hot_map_top a,
+.pagemain .hotalbum .hot_map_bottom1 a,
+.pagemain .hotalbum .hot_map_bottom2 a,
+.pagemain .hotalbum .hot_map_bottom3 a{
     display: block;
     border: 1px solid blue;
     background: red;
@@ -570,45 +593,65 @@ nav p a:hover {
         width:420px;
         height: 300px;
     }
+
+/* position: relative; */
+.xiaoye .pagemain .newproduct,
+.xiaoye .pagemain .clearance,
+.xiaoye .pagemain .hishopping,
+.xiaoye .pagemain .fallwinter,
+.xiaoye .pagemain .tideproduct,
+.xiaoye .pagemain .hotalbum{
+    position: relative;
+}
+
+/* 1move+4bottom */
 /* 2. 新品专区 */
 .xiaoye .pagemain .newproduct{
     height: 2711px;
-    position: relative;
 }
-    /* 新品move */
+    /* 新品+清仓+秋冬-move宽高*/
 .pagemain .newproduct .new_move,
-.pagemain .clearance .clear_move{
+.pagemain .clearance .clear_move,
+.pagemain .fallwinter .fall_move,
+.pagemain .tideproduct .tide_move{
     width:860px;
     height:352px ;
 }
-    /* 新品定位 */
-    .pagemain .newproduct .new_move{
-        top: 10px;
+    /* 新品+清仓+秋冬-move定位 */
+    .pagemain .newproduct .new_move,
+    .pagemain .clearance .clear_move,
+    .pagemain .fallwinter .fall_move,
+    .pagemain .tideproduct .tide_move{
+        top: 5px;
         left: 505px;
     }
-    .pagemain .newproduct .new_map{
+    /* 新品+嗨购+秋冬-bottom定位(黄色) */
+    .pagemain .newproduct .new_map,
+    .pagemain .hishopping .hi_map_bottom,
+    .pagemain .fallwinter .fall_map_bottom,
+    .pagemain .tideproduct .tide_map_bottom{
         width:912px;
         height:2255px ;
         top: 375px;
         left:496px;
     }
-    .pagemain .newproduct .new_map a{
+    /* 新品+嗨购+秋冬-a定位(红色) */
+    .pagemain .newproduct .new_map a,
+    .pagemain .hishopping .hi_map_bottom a,
+    .pagemain .fallwinter .fall_map_bottom a,
+    .pagemain .tideproduct .tide_map_bottom a{
         width:285px;
         height:535px ;
         top: 375px;
         left:496px;
     }
-
-/* 3. 清仓专区 */
+    
+/* 1move+3bottom */
+/* 3. 李宁清仓专区 */
 .xiaoye .pagemain .clearance{
     height: 2113px;
-    position: relative;
 }
     /* 清仓定位 */
-    .pagemain .clearance .clear_move{
-        top: 0px;
-        left: 505px;
-    }
     .pagemain .clearance .clear_map{
         width:912px;
         height:1660px ;
@@ -622,48 +665,63 @@ nav p a:hover {
         left:496px;
     }
 
-/* 热卖嗨购 */
-.xiaoye .pagemain .hishopping{
+/* 1move+1top+4bottom */
+/* 4. 热卖嗨购  5. 秋冬新品 */
+.xiaoye .pagemain .hishopping,
+.xiaoye .pagemain .fallwinter,
+.xiaoye .pagemain .tideproduct{
     height: 3116px;
-    position: relative;
 }
-    /* 嗨购 定位 */
-    .pagemain .hishopping .hi_map_top{
-        width:950px;
+    /* 嗨购+秋冬 top+bottom定位 */
+    .pagemain .hishopping .hi_map_top,
+    .pagemain .fallwinter .fall_map_top,
+    .pagemain .tideproduct .tide_map_top{
+        width:920px;
         height:460px ;
-        top:350 px;
+        top:355px;
         left:496px;
     }
-    .pagemain .hishopping .hi_map_bottom{
-        width:912px;
-        height:2255px ;
-        top: 820px;
-        left:496px;
+    .pagemain .hishopping .hi_map_bottom,
+    .pagemain .fallwinter .fall_map_bottom,
+    .pagemain .tideproduct .tide_map_bottom{
+        top: 850px;
     }
-    /* .pagemain .hishopping .hi_map_bottom a{
-        width:285px;
-        height:535px ;
-        top: 375px;
-        left:496px;
-    } */
+    .pagemain .hishopping .hi_map_bottom a,
+    .pagemain .fallwinter .fall_map_bottom a,
+    .pagemain .tideproduct .tide_map_bottom a{
+        top: 850px;
+    }
 
 
-/* 秋冬新品 */
-.xiaoye .pagemain .fallwinter{
-    height: 3122px;
-}
-
-/* 潮品聚集 */
+/* 6. 潮品聚集 */
 .xiaoye .pagemain .tideproduct{
     height: 3164px;
 }
-
-/* HOT ALBUM */
+.pagemain .tideproduct .tide_move{
+    top: 20px;
+}
+.pagemain .tideproduct .tide_map_top{
+    top:400px;
+}
+.pagemain .tideproduct .tide_map_bottom{
+    top:900px;
+}
+/* 7. HOT ALBUM */
 .xiaoye .pagemain .hotalbum{
     height:2107px;
 }
+.pagemain .hotalbum .hot_map_top{
+    width: 930px;
+    height: 830px;
+    top:300px ;
+    left: 490px;
+}
+.pagemain .hotalbum .hot_map_top a{
+    width: 450px;
+    height: 400px;
+}
 
-/* 卫衣外套 */
+/* 8. 卫衣外套 */
 .xiaoye .pagemain .jacket{
     height: 379px;
 }
@@ -679,7 +737,7 @@ nav p a:hover {
     margin:0 auto;
 }
 
-/* 运动长裤 */
+/* 9. 运动长裤 */
 .xiaoye .pagemain .pants{
     height: 366px;
 }
@@ -695,7 +753,7 @@ nav p a:hover {
     margin:0 auto;
 }
 
-/* 跑步鞋 */
+/* 10. 跑步鞋 */
 .xiaoye .pagemain .running{
     height: 358px;
 }
@@ -711,7 +769,7 @@ nav p a:hover {
     margin:0 auto;
 }
 
-/* 休闲鞋 */
+/* 11. 休闲鞋 */
 .xiaoye .pagemain .leisure{
     height: 376px;
 }
@@ -728,7 +786,7 @@ nav p a:hover {
 }
 
 
-/* 童装童鞋 */
+/* 12. 童装童鞋 */
 .xiaoye .pagemain .children{
     height: 359px;
 }
@@ -744,7 +802,7 @@ nav p a:hover {
     margin:0 auto;
 }
 
-/* 包包配件 */
+/* 13. 包包配件 */
 .xiaoye .pagemain .bags{
     height: 375px;
 }
