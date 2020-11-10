@@ -99,7 +99,8 @@ header {
 
 /* .header-topnav 头部导航 */
 .header-topnav {
-    position: relative; width: 990px;
+    position: relative; 
+    width: 990px;
     padding-top: 4px;
     height: 21px;
     margin: 0 auto;

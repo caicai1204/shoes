@@ -219,7 +219,7 @@ main .form_right .sqr .p5 .pass{
     text-align: bottom;
     position: relative;
 }
-main .form_right .sqr .p5 .pass a{
+main .form_right .sqr .p5 .pass .wangji{
     color: #666;
     position: absolute;
     top: 20px;
