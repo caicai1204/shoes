@@ -1,0 +1,317 @@
+body,
+ul,
+dl,
+dt,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+table,
+fieldset,
+legend,
+figure,
+figcaption,
+menu,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+input,
+a {
+    outline: none;
+}
+
+
+/* 以上内容为样式重置 */
+html,
+body {
+    height: 100%;
+}
+
+body,
+header,
+main,
+.header-top,
+.header-bottom,
+.content-center,
+.content-bottom,
+nav,
+.footer {
+    margin: 0 auto;
+    width: 990px;
+}
+
+
+body{
+    margin: 0 auto;
+}
+
+/* 头部 */
+header{
+    height: 73px;
+    padding: 30px 0 0;
+}
+/* main */
+main {
+    width: 990px;
+    height: 480px;
+}
+
+
+main .home{
+    margin: 0 auto;
+    width: 780px;
+    line-height: 28px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 12px;
+}
+main .home a{
+    color: #999;
+}
+main .home a:hover{
+    color: red;
+    cursor: pointer;
+    border-bottom: 1px solid red;
+}
+
+/* 注册 */
+main .form{
+    width: 778px;
+    height: 438px;
+    padding: 0;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    box-shadow: 0 0 8px #E5E5E5;
+    margin: 10px auto;
+    font-size: 12px;
+    color: #333;
+}
+main .form .title{
+    font-size: 16px;
+    font-family: microsoft yahei;
+    color: #888;
+    background: #f8f8f8;
+    padding: 4px 10px;
+    border-bottom: 1px solid #efefef;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+}
+
+/* 注册表格 */
+/* regist_left */
+main .form .regist_left{
+    width: 426px;
+    height: 288px;
+    padding: 40px 0 80px 80px;
+    float: left;
+}
+
+main .regist_left .p1,.p2,.p3,.p4,.p5,.p6{
+    width: 307px;
+    display: block;
+    padding-top: 15px;
+}
+main .regist_left span{
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-align: right;
+    width:75px;
+    height: 30px;
+    padding: 0;
+}
+main .regist_left input{
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+}
+/* p1,p2,p3 */
+main .regist_left .p1{
+    height:20px;
+}
+main .regist_left .p2{
+    padding-top: 0;
+    line-height: 30px;
+}
+main .regist_left .p2 input{
+    height:22px;
+}
+main .regist_left .p3{
+    height: 30px;
+}
+main .regist_left .p3 span{
+    line-height: 30px;
+}
+main .regist_left .p3 input{
+    float: left;
+    height: 22px;
+}
+/* p4 */
+main .regist_left .p4{
+    height: 26px;
+}
+main .regist_left .p4 span{
+    height: 26px;
+    line-height: 26px;
+}
+main .regist_left .p4 input{
+    float: left;
+    width: 65px;
+    height: 22px;
+    padding: 1px 0;
+}
+main .regist_left .p4 .code{
+    width: 150px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+}
+main .regist_left .p4 .code .tu{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    line-height: 26px;
+}
+main .regist_left .p4 .code img{
+    width: 60px;
+    height: 26px;
+}
+main .regist_left .p4 .code .tu a{
+    color:#666;
+    font-weight: 400;
+}
+
+/* p5 */
+main .regist_left .p5{
+    width: 351px;
+    height: 19px;
+    padding-top:25px;
+    font-size: 12px;
+    text-align: bottom;
+    position: relative;
+    line-height: 16px;
+}
+main .regist_left .p5 a{
+    color: rgb(51, 102, 221);
+    position: absolute;
+    top: 28px;
+    left: 184px;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(51, 102, 221);
+}
+
+main .regist_left .p5 input{
+    width: 13px;
+    height: 13px;
+    margin: 3px 3px 3px 4px ;
+}
+
+/* p6 */
+main .regist_left .p6{
+    width: 351px;
+    height: 38px;
+    padding-top: 10px;
+    font-size: 12px;
+    text-align: bottom;
+    position: relative;
+    line-height: 16px;
+}
+main .regist_left .p6 input{
+    padding: 1px 6px;
+    cursor: pointer;
+    border: none;
+    background: url(https://images.s.cn/themes/scn2012/images/scn04.png) no-repeat 0 -198px;
+    width: 89px;
+    height: 37px;
+    text-indent: 0;
+    color: #fff;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* regist_right */
+main .form .regist_right{
+    width: 165px;
+    height: 244px;
+    float: left;
+    margin: 54px 0 ;
+    padding: 56px  53px 0;
+    border-left: 1px dashed #ccc;
+}
+main .form .regist_right b{
+    display: inline-block;
+    width: 108px;
+    height: 14px;
+    font-size: 12px;
+    margin: 0 27px 14px;
+}
+main .form .regist_right a{
+    display: inline-block;
+    width: 91px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    color: #c66;
+    font-size: 14px;
+    font-weight: 700;
+    background: url(https://images.s.cn/images/css/loginbg.png) no-repeat;
+    margin-left:34px;
+}
+main .form .regist_right  img{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
