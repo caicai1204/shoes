@@ -99,7 +99,8 @@ header {
 
 /* .header-topnav 头部导航 */
 .header-topnav {
-    position: relative; width: 990px;
+    position: relative; 
+    width: 990px;
     padding-top: 4px;
     height: 21px;
     margin: 0 auto;
@@ -884,7 +885,6 @@ nav p a:hover {
 
 /* bottom 最下部 */
 .bottom {
-    border-top: 2px solid red;
     border-bottom: 1px solid #e8e8e8;
     background: rgb(233, 192, 177);
     box-sizing: border-box;
