@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            display: block;
+            border: none;
+        }
+        #wrap{
+            position: relative;
+        }
+        #wrap div{
+            position: absolute;
+            width: 225px;
+            border: 1px solid #cecece;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div><img src="img2/1.jpg"></div>
+        <div><img src="img2/3.jpg"></div>
+        <div><img src="img2/5.jpg"></div>
+        <div><img src="img2/7.jpg"></div>
+        <div><img src="img2/9.jpg"></div>
+        <div><img src="img2/2.jpg"></div>
+        <div><img src="img2/4.jpg"></div>
+        <div><img src="img2/6.jpg"></div>
+        <div><img src="img2/8.jpg"></div>
+        <div><img src="img2/2.jpg"></div>
+        <div><img src="img2/5.jpg"></div>
+        <div><img src="img2/5.jpg"></div>
+        <div><img src="img2/9.jpg"></div>
+        <div><img src="img2/3.jpg"></div>
+        <div><img src="img2/7.jpg"></div>
+        <div><img src="img2/2.jpg"></div>
+        <div><img src="img2/1.jpg"></div>
+        <div><img src="img2/1.jpg"></div>
+        <div><img src="img2/5.jpg"></div>
+        <div><img src="img2/7.jpg"></div>
+        <div><img src="img2/9.jpg"></div>
+        <div><img src="img2/2.jpg"></div>
+    </div>
+    <script>
+        //瀑布流 布局方式 宽度相同高度参差不齐的多栏布局形式，当滚动条滚动时，会不断的向页面中添加新的数据。
+
+        var data = ["img2/1.jpg","img2/2.jpg","img2/3.jpg"];
+        function FallWater(){
+            this.wrap = document.getElementById("wrap");//整个展示区域
+            this.item = this.wrap.children;//所有的区块
+
+            this.ml = this.mt = 10;
+
+            this.totalWidth = this.wrap.offsetWidth;//总宽度
+            this.perWidth = this.item[0].offsetWidth + this.ml; //单位宽
+            this.cols = Math.floor(this.totalWidth/this.perWidth);//列数（栏数）
+
+            this.arrHei = [];//存放每一列的高度
+
+            this.conFirstPos();//排第一行
+            this.conOtherPos(this.cols);//排剩余的
+            this.addData();
+        }
+
+        FallWater.prototype.conFirstPos = function(){
+            for(let i = 0; i < this.cols; i++){
+                this.item[i].style.top = 0;
+                this.item[i].style.left = i * this.perWidth + "px";
+                this.arrHei.push(this.item[i].offsetHeight);
+            }
+        }
+
+        FallWater.prototype.getMin = function(){ //去数组最小值及索引
+            this.minHei = Math.min.apply(null,this.arrHei);
+            this.minIndex = this.arrHei.indexOf(this.minHei);
+        }
+
+        FallWater.prototype.conOtherPos = function(startIndex){
+            //找到高度最下的那一列，将下一个区块定位到这一列的后面，之后更新高度，再判断
+            for(let i = startIndex; i < this.item.length;i++){
+                this.getMin();
+                this.item[i].style.top = this.minHei + this.mt + "px";
+                this.item[i].style.left = this.item[this.minIndex].style.left;
+                this.arrHei[this.minIndex] += this.item[i].offsetHeight + this.mt; 
+            }
+
+        }
+
+        FallWater.prototype.addData = function(){
+            this.getMin();
+            let ch = document.documentElement.clientHeight;//可视区域的高度
+            window.onscroll = ()=>{
+                var st = document.documentElement.scrollTop || document.body.scrollTop;
+                //this.getMin();
+                if(st>=this.minHei-ch){
+                    //条件满足塞区块，然后按照规律把新增的区块排到对应的位置
+                    data.forEach(item=>{
+                        let oDiv = document.createElement("div");
+                        oDiv.innerHTML = `<img src="${item}">`;
+                        this.wrap.appendChild(oDiv);
+                    });
+                    this.conOtherPos(this.item.length - data.length);
+                    this.getMin();
+                }
+
+            }
+
+
+        }
+
+        window.onresize = window.onload = function(){
+            new FallWater();
+        }
+        
+    </script>
+</body>
+</html>

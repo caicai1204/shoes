@@ -193,7 +193,7 @@ header {
 .header-topnav ul  li:nth-of-type(2) .myshoes_drop{
     width: 165px;
     padding-right: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 10px 10px 10px 15px;
     min-width: 65px;
 }
@@ -269,7 +269,7 @@ header {
 .header-bottom div input[type=button] {
     width: 65px;
     height: 30px;
-    background: #444444;
+    background: #444;
     border: 0;
     margin-left: -6px;
     vertical-align: bottom;
@@ -384,6 +384,7 @@ nav h3 {
     font-weight: 700;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 nav h3 a {
@@ -397,6 +398,12 @@ nav h3 ul {
     font-weight: 100;
     display: none;
     text-align: left;
+    position: absolute;
+    top:35px;
+    width: 189px;
+    left: 0;
+    opacity: 1; 
+    z-index: 9999;
 }
 
 nav h3 ul li {
@@ -406,6 +413,7 @@ nav h3 ul li {
 
 nav h3:hover ul {
     display: flex;
+    float: left;
 }
 nav ul:nth-of-type(1) li:first-child{
     background-color: #444;
@@ -768,9 +776,9 @@ nav p a:hover {
 
 
 /* 8. 卫衣外套 */
-.xiaoye .pagemain .jacket{
-    /* position: relative; */
-}
+/* .xiaoye .pagemain .jacket{
+    position: relative;
+} */
 .xiaoye .pagemain .jacket_move{
     width: 990px;
     height: 379px;

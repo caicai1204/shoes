@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            list-style: none;
+            float: left;
+            width: 27px;
+            height: 28px;
+            background: url(img/star.gif) no-repeat 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div id="tip"></div>
+    <script type="text/javascript">
+        let data = [1, 2, 3, 4, 5];
+        let aLi = document.querySelectorAll("li");
+        let oTip = document.getElementById("tip");
+        let flag = false; //默认没点
+        let curIndex = 0; //点击的li的索引
+
+        for (let i = 0; i < aLi.length; i++) {
+            //鼠标移入事件 当前及之前的点亮
+            aLi[i].onmouseover = function() {
+                    //把所有全清掉
+                    for (let j = 0; j < aLi.length; j++) {
+                        aLi[j].style.backgroundPosition = "0 0";
+                    }
+
+                    //把当前和之前的点亮
+                    for (let j = 0; j <= i; j++) {
+                        aLi[j].style.backgroundPosition = "0 -27px";
+                    }
+
+                    oTip.innerText = data[i];
+                }
+                //鼠标移出 
+            aLi[i].onmouseout = function() {
+                    //没点全清
+                    for (let j = 0; j < aLi.length; j++) {
+                        aLi[j].style.backgroundPosition = "0 0";
+                    }
+                    oTip.innerText = "";
+                    //点了就保留点的那个li及之前的li要点亮
+                    if (flag) {
+                        for (let j = 0; j <= curIndex; j++) {
+                            aLi[j].style.backgroundPosition = "0 -27px";
+                        }
+                        oTip.innerText = data[curIndex];
+                    }
+                }
+                //点击事件
+            aLi[i].onclick = function() {
+                flag = true;
+                curIndex = i;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

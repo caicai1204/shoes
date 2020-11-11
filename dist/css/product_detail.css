@@ -1,0 +1,319 @@
+/* main商品详情部分 */
+main .top{
+    width: 990px;
+    height: 34px;
+}
+
+
+.good_viewer{
+    width: 990px;
+    height: 536px;
+}
+.viewer_left{
+    width: 447px;
+    height: 536px;
+    float: left;
+}
+.good_detail{
+    width: 430px;
+    height: 430px;
+}
+.good_detail img{
+    width: 430px;
+    height: 430px;
+}
+/* 缩略图部分 */
+.good_detail_pics{
+    width: 265px;
+    height: 47px;
+}
+.good_detail_pics span{
+    display: block;
+    float: left;
+    width: 51px;
+    height: 47px;
+    margin-right: 2px;
+}
+.good_detail_pics .uparrow{
+    height: 6px;
+    font-size: 0;
+    background: transparent url(https://images.s.cn/statics/upyellowarrow.gif) no-repeat 50% 100%;
+    visibility: hidden;
+}
+.good_detail_pics span:hover .uparrow{
+    visibility: visible;
+}
+.good_detail_pics img{
+    width: 45px;
+    height: 35px;
+    border: 1px solid #e9e9e9;
+    margin: 0 auto;
+}
+.good_detail_pics span:hover img{
+    border: 2px solid rgb(255,102,0);
+}
+/* 分享 */
+.share {
+    margin: 20px 20px 0 0;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) repeat-x 0 -38px;
+    width: 427px;
+    height: 30px;
+}
+.share span {
+    float: left;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.share a {
+    color: #666;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px 0 20px;
+    background: url(https://images.s.cn/statics/share.png) no-repeat;
+}
+.share a.sina{
+    background-position: 0 -64px;
+}
+.share a.renren{
+    background-position: 0 -19px;
+}
+.share a.kaixin{
+    background-position: 0 3px;
+}
+.share a.douban{
+    background-position: 0 -41px;
+}
+.share a.qq{
+    background-position: 0 -103px;
+}
+.share a.tc{
+    background-position: 0 2px;
+}
+
+/* 右半部分 */
+
+.viewer_right{
+    width: 543px;
+    height: 536px;
+    background-color:thistle;
+    float: left;
+}
+.goodnamewrap {
+    width: 543px;
+    height: 32px;
+    line-height:32px;
+    margin-bottom: -4px;
+}
+.goodnamewrap h1 {
+    display: inline;
+    margin: 0;
+    font-size: 14px;
+    width: 435px;
+    height: 21px;
+    font-weight: 700;
+}
+.goodnamewrap .morebrand {
+    width: 72px;
+    height: 21px;
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+    display: block;
+    color: #999;
+}
+
+.goodnamewrap .morebrand a{
+    color: #F60;
+}
+.viewer_right .sp {
+    margin: 5px 0;
+    width: 543px;
+    height: 1px;
+    overflow: hidden;
+    clear: both;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) repeat-x;
+}
+
+ul.list {
+    width: 533px;
+    height: 102px;
+    margin: 8px 5px 10px;
+    display: block;
+    /* background-color:lightgreen; */
+}
+ul.list li {
+    width: 533px;
+    height: 25px;
+    font-size: 12px;
+    color: #666;
+    display: block;
+    line-height: 25px;
+    /* background-color: lightyellow; */
+}
+
+ul.list li span {
+    width: 65px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.salePrice_big {
+    color: #d00;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: verdana;
+}
+
+.comCountBar, .comCountBar i {
+    display: inline-block;
+    height: 11px;
+    overflow: hidden;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) no-repeat -99px -175px;
+}
+ul.list li .comCount {
+    color: #2d499d;
+}
+
+/* 促销 */
+
+.push_sale {
+    padding: 10px 0 5px;
+    font-size: 12px;
+    font-family: '宋体';
+    clear: both;
+    color: #999;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) repeat-x 0 -65px;
+    height: 20px;
+    line-height: 20px;
+    background-color: mediumslateblue;
+}
+.push_sale .sbg {
+    background: #ffe9e9;
+    height: 20px;
+}
+.push_sale .t {
+    height: 20px;
+    padding: 0 5px;
+    text-align: center;
+    border-right: 2px solid #fff;
+    float: left;
+    color: #fff;
+    background: #ff9090;
+}
+.push_sale .scon {
+    padding: 0 5px;
+    height: 20px;
+    color: #fe6464;
+    float: left;
+    white-space: nowrap;
+}
+/* 加购物车部分 */
+.hightline{
+    width: 543px;
+    height: 255px;
+    margin-top: 5px;
+    color: #666;
+    background-color: olive;
+}
+.hightbox,.info,.spec-item{
+    width: 539px;
+}
+.hightbox {
+    height: 116px;
+    background: #f5f5f5;
+    padding: 7px 2px;
+    
+}
+.info{
+    height: 83px;
+    background-color: yellow;
+}
+.spec-item{
+    height: 37px;
+    background-color: turquoise;
+    float: left;
+}
+
+.min-w {
+    width: 75px;
+    height: 14px;
+    float: left;
+    padding: 11.5px 0;
+    font-size: 12px;
+    display: inline-block;
+    text-align: right;
+    font-style: normal;
+    
+}
+.info .space-item1,
+.info .space-item2{
+    width: 300px;
+}
+.info .space-item1 li,
+.info .space-item2 li{
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+    margin:9px 3px;
+    float: left;
+    border: 1px solid #999;
+}
+.info .space-item1 li{
+    width: 26px;
+}
+.info .space-item2 li{
+    width:34px;
+}
+.info li:hover{
+    color: rgb(255,153,0);
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid rgb(255,153,0);
+}
+.buyinfo{
+    width: 200px;
+    height: 24px;
+    margin: 5px 0;
+    background-color: limegreen;
+}
+.buyinfo .min-w{
+    padding: 4.5px 0;
+}
+
+.buyinfo span{
+    width: 10px;
+    height: 10px;
+    font-size: 14px;
+    margin-top: 7px;
+    line-height: 10px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    float: left;
+}
+
+.buyinfo input{
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    height: 14px;
+    width: 24px;
+    line-height: 16px;
+    text-align: center;
+    margin: 3px;
+    float: left;
+    font-family: arial;
+    color: #555;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.buyinfo span:hover{
+    cursor: pointer;
+}
