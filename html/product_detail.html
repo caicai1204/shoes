@@ -7,7 +7,7 @@
     <title>商品详情</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/product_detail.css">
-    <link rel="stylesheet" href="../js/zoom.js">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -120,36 +120,38 @@
         <div class="top"></div>
         <div class="good_viewer">
             <!-- 左侧部分 -->
-            <!--<div class="viewer_left">
-                大图
-                <div class="good_detail">
-                    <img src="https://images.s.cn/images/goods/20180806/1eaad1a4565de6d3.jpg" alt="">
-                </div>
-                  // 5个缩略图部分
-                <div class="good_detail_pics">
-                    <span>
-                        <div class="uparrow"></div>
-                        <img src="https://images.s.cn/images/goods/20180806/432ca884910aad7f.jpg" alt="">
-                    </span>
-                    <span>
-                        <div class="uparrow"></div>
-                        <img src="https://images.s.cn/images/goods/20180806/bba5506e974d433a.jpg" alt="">
-                    </span>
-                    <span>
-                        <div class="uparrow"></div>
-                        <img src="https://images.s.cn/images/goods/20180806/1133acb56bbb563a.jpg" alt="">
-                    </span>
-                    <span>
-                        <div class="uparrow"></div>
-                        <img src="https://images.s.cn/images/goods/20170731/689fe35492a5d5b5.jpg" alt="">
-                    </span>
-                    <span>
-                        <div class="uparrow"></div>
-                        <img src="https://images.s.cn/images/goods/20170731/b9f048e840eb681e.jpg" alt="">
-                    </span>
-                </div> -->
+            <div class="viewer_left">
 
-                
+                <!-- 第一部分动图传递 -->
+                <div class="dongtuchuandi">
+                    <!-- 大图 -->
+                    <!-- <div class="good_detail">
+                        <img src="https://images.s.cn/images/goods/20180806/1eaad1a4565de6d3.jpg" alt="">
+                    </div>
+
+                    <div class="good_detail_pics">
+                        <span>
+                            <div class="uparrow"></div>
+                            <img src="https://images.s.cn/images/goods/20180806/432ca884910aad7f.jpg" alt="">
+                        </span>
+                        <span>
+                            <div class="uparrow"></div>
+                            <img src="https://images.s.cn/images/goods/20180806/bba5506e974d433a.jpg" alt="">
+                        </span>
+                        <span>
+                            <div class="uparrow"></div>
+                            <img src="https://images.s.cn/images/goods/20180806/1133acb56bbb563a.jpg" alt="">
+                        </span>
+                        <span>
+                            <div class="uparrow"></div>
+                            <img src="https://images.s.cn/images/goods/20170731/689fe35492a5d5b5.jpg" alt="">
+                        </span>
+                        <span>
+                            <div class="uparrow"></div>
+                            <img src="https://images.s.cn/images/goods/20170731/b9f048e840eb681e.jpg" alt="">
+                        </span>
+                    </div> -->
+                </div>
                 <div class="share">
                     <span>分享到：</span>
                     <a href="#" class="sina"></a>
@@ -162,24 +164,27 @@
             </div>
             <!-- 右侧部分 -->
             <div class="viewer_right">
-                <!-- <div class="goodnamewrap">
-                    <h1 class="goodname">adidas阿迪达斯男子女子双肩包新款附配件BR5864</h1>
-                    <span class="morebrand">更多<a href="#">阿迪达斯</a></span>
-                    <div class="sp"></div>
+                <!-- 第二部分价格传递 -->
+                <div class="jiagechuandi">
+                    <!-- <div class="goodnamewrap">
+                        <h1 class="goodname">adidas阿迪达斯男子女子双肩包新款附配件BR5864</h1>
+                        <span class="morebrand">更多<a href="#">阿迪达斯</a></span>
+                        <div class="sp"></div>
+                    </div>
+                    <ul class="goods_price list">
+                        <li></li>
+                        <li>
+                            <span>销&nbsp;&nbsp;售&nbsp;&nbsp;价：</span>
+                            <span class="price  salePrice_big">￥132.00</span>
+                            <span></span>
+                        </li>
+                        <li>好&ensp;评&ensp;度：&nbsp;
+                            <span class="comCountBar"><i></i></span>
+                            （ <a href="#" class="comCount">已有10w+人评论</a> ）
+                        </li>
+                        <li>运&ensp;&ensp;&ensp;&ensp;费：&nbsp;名鞋库会员满99包邮&nbsp;(&nbsp;不包括货到付款&nbsp;)</li>
+                    </ul>  -->
                 </div>
-                <ul class="goods_price list">
-                    <li></li>
-                    <li>
-                        <span>销&nbsp;&nbsp;售&nbsp;&nbsp;价：</span>
-                        <span class="price  salePrice_big">￥132.00</span>
-                        <span></span>
-                    </li>
-                    <li>好&ensp;评&ensp;度：&nbsp;
-                        <span class="comCountBar"><i></i></span>
-                        （ <a href="#" class="comCount">已有10w+人评论</a> ）
-                    </li>
-                    <li>运&ensp;&ensp;&ensp;&ensp;费：&nbsp;名鞋库会员满99包邮&nbsp;(&nbsp;不包括货到付款&nbsp;)</li>
-                </ul> -->
                 <!-- 促销信息 -->
                 <div class="push_sale">
                     <div class="sbg">
@@ -189,6 +194,7 @@
                 </div>
                 <!-- 加购物车部分 -->
                 <div class="hightline">
+                    <!-- 尺码颜色购买数量 -->
                     <div class="hightbox">
                         <div class="info">
                             <div class="space-item1">
@@ -215,14 +221,34 @@
                         <div class="buyinfo">
                             <em class="min-w">购买数量：</em>
                             <div class="numadjust">
-                                <span >-</span>
-                                <input type="text" value="1">
-                                <span>+</span>
+                                <span id="jian">-</span>
+                                <input type="text" value="1" id="detail-num">
+                                <span id="jia">+</span>
                             </div>
                         </div>
-
                     </div>
+
+                    <div class="sp"></div>
+
+                    <!-- 加入购物车按钮 -->
+                    <div class="btnBar">
+                        <span class="goods_ck_info">
+                            <!-- 您将购买<span class="buynums">1</span>件&nbsp;&nbsp;白色 -->
+                        </span>
+                        <div class="btnsBox">
+                            <a href="javascript:void(0)">
+                                <input type="text" class="btn-buy">
+                            </a>
+                            <!-- <a href="cart.html">
+                                <input type="text" class="btn-fastbuy">
+                            </a> -->
+                        </div>
+                    </div>
+
+                    <div class="sp"></div>
+
                 </div>
+
             </div>
         </div>
 
@@ -421,9 +447,12 @@
 
 </body>
 
-
-
 <script src="../js/jquery-1.11.0.js"></script>
 <script src="../js/product_detail.js"></script>
+
+
+<script>
+    document.onselectstart = new Function("event.returnValue=false;"); //阻止选中
+</script>
 
 </html>

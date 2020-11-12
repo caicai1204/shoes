@@ -1,13 +1,12 @@
 
 let id=location.search.split("=")[1];
-
+console.log(id);
 $.get(`http://localhost:3000/productlist?id=${id}`).then(data=>{
     let str="";
+    console.log(data);
     str+=`
-    <div class="viewer_left">
-        
         <div class="good_detail">
-            <img src="${data[0].imgUrl}" alt="">
+            <img src="${data[0].imgUrl}" alt="" id="detail-img">
         </div>
         
         <div class="good_detail_pics">
@@ -32,77 +31,63 @@ $.get(`http://localhost:3000/productlist?id=${id}`).then(data=>{
                 <img src="${data[0].imgUrl}" alt="">
             </span>
         </div>
-    </div>
     `
-    $(".good_viewer").html(str);
 
-    str1+=`
-    <div class="goodnamewrap">
-        <h1 class="goodname">${data[0].title}</h1>
-        <span class="morebrand">更多<href="#">阿迪达斯</a></span>
-        <div class="sp"></div>
-    </div>
-    <ul class="goods_price list">
-        <li></li>
-        <li>
-            <span>销&nbsp;&nbsp;售&nbsp;&nbs价：</span>
-            <span class="pricesalePrice_big">￥${data[0].price}</span>
-            <span></span>
-        </li>
-        <li>好&ensp;评&ensp;度：&nbsp;
-            <spanclass="comCountBar"><i><i></span>
-            （ <a href="#"class="comCount">已有10w+评论</a> ）
-        </li>
-        <li>运&ensp;&ensp;&ensp;&ensp费：&nbsp;名鞋库会员满99包邮nbsp;(&nbsp;不包括货到付款&nbsp;)</li>
-    </ul>
-
-    <div class="push_sale">
-        <div class="sbg">
-            <div class="t">促销信息</div>
-            <div class="scon">99包邮&ensp;&ensp;限购3件</div>
-        </div>
-    </div>
-    <div class="hightline">
-        <div class="hightbox">
-            <div class="info">
-                <div class="space-item1">
-                    <em class="min-w">尺码：</em>
-                    <ul>
-                        <li>34</li>
-                        <li>36</li>
-                        <li>38</li>
-                        <li>40</li>
-                        <li>42</li>
-                    </ul>
-                </div>
-                <div class="space-item2">
-                    <em class="min-w">颜色：</em>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="buyinfo">
-                <em class="min-w">购买数量：</em>
-                <div class="numadjust">
-                    <span >-</span>
-                    <input type="text" value="1">
-                    <span>+</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    // `
-    // $("#productlist").html(str);
+    $(".dongtuchuandi").html(str);
 });
 
 
 
+$.get(`http://localhost:3000/productlist?id=${id}`).then(data=>{
+    let str1="";
+    console.log(data);
+    console.log(data[0].title);
+    str1+=`
+        <div class="goodnamewrap">
+            <h1 class="goodname" id="detail-title">${data[0].title}</h1>
+            <span class="morebrand">更多<href="#">阿迪达斯</a></span>
+            <div class="sp"></div>
+        </div>
+        <ul class="goods_price list">
+            <li></li>
+            <li>
+                <span>销&nbsp;&nbsp;售&nbsp;&nbsp;价：</span>
+                ￥<span class="pricesalePrice_big" id="detail-price">${data[0].price}</span>
+                <span></span>
+            </li>
+            <li>好&ensp;评&ensp;度：&nbsp;
+                <spanclass="comCountBar"><i><i></span>
+                （ <a href="#"class="comCount">已有10w+评论</a> ）
+            </li>
+            <li>运&ensp;&ensp;&ensp;&ensp;费：&nbsp;名鞋库会员满99包邮nbsp;(&nbsp;不包括货到付款&nbsp;)</li>
+        </ul>
+     `
+    $(".jiagechuandi").html(str1);
+
+
+
+    console.log($("#jian"));
+    $("#jian").click(function(){
+        let num=$("#detail-num").val();
+        num--;
+        if(num<1){
+            num=1;
+        }
+        $("#detail-num").val(num);
+    })
+    $("#jia").click(function(){
+        let num=$("#detail-num").val();
+        num++;
+        
+        $("#detail-num").val(num);
+    })
+    $("#detail-num").change(function(){
+        let num=$("#detail-num").val();
+        if(num<1){
+            num=1;
+        }
+        $("#detail-num").val(num);
+    })
 
 
 
@@ -111,4 +96,39 @@ $.get(`http://localhost:3000/productlist?id=${id}`).then(data=>{
 
 
 
-document.onselectstart = new Function("event.returnValue=false;"); //阻止选中
+
+    $(".btn-buy").click(function(){
+        axios.get("http://localhost:3000/cart",{
+            params:{
+                id:id
+            }
+        }).then(data=>{
+            console.log(data.data);
+            if(data.data.length==0){
+                axios.post("http://localhost:3000/cart",{
+                    id:id,
+                    imgUrl:$("#detail-img").attr("src"),
+                    title:$("#detail-title").text(),
+                    price:$("#detail-price").text(),
+                    num:$("#detail-num").val()
+                });
+                alert("添加成功");
+                window.location.href="../html/cart.html";
+        }else{
+            axios.get("http://localhost:3000/cart",{
+                params:{id:id}
+            }).then(gai=>{
+                let num=Math.floor(gai.data[0].num);
+                num+=Math.floor($("#detail-num").val());
+                axios.patch(`http://localhost:3000/cart/${id}`,{
+                    num:num
+                })
+                alert("添加成功！");
+                window.location.href="../html/cart.html";
+            })
+        }
+        })
+
+    }) 
+
+})

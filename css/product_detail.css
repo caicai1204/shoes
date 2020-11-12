@@ -100,8 +100,12 @@ main .top{
 .viewer_right{
     width: 543px;
     height: 536px;
-    background-color:thistle;
+    /* background-color:thistle; */
     float: left;
+}
+.jiagechuandi{
+    width: 543px;
+    height: 138px;
 }
 .goodnamewrap {
     width: 543px;
@@ -190,7 +194,7 @@ ul.list li .comCount {
     background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) repeat-x 0 -65px;
     height: 20px;
     line-height: 20px;
-    background-color: mediumslateblue;
+    /* background-color: mediumslateblue; */
 }
 .push_sale .sbg {
     background: #ffe9e9;
@@ -218,8 +222,9 @@ ul.list li .comCount {
     height: 255px;
     margin-top: 5px;
     color: #666;
-    background-color: olive;
+    /* background-color: olive; */
 }
+/* 尺码颜色购买数量 */
 .hightbox,.info,.spec-item{
     width: 539px;
 }
@@ -231,11 +236,11 @@ ul.list li .comCount {
 }
 .info{
     height: 83px;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 .spec-item{
     height: 37px;
-    background-color: turquoise;
+    /* background-color: turquoise; */
     float: left;
 }
 
@@ -281,7 +286,7 @@ ul.list li .comCount {
     width: 200px;
     height: 24px;
     margin: 5px 0;
-    background-color: limegreen;
+    /* background-color: limegreen; */
 }
 .buyinfo .min-w{
     padding: 4.5px 0;
@@ -317,3 +322,74 @@ ul.list li .comCount {
 .buyinfo span:hover{
     cursor: pointer;
 }
+
+
+.sp {
+    margin: 5px 0;
+    height: 1px;
+    overflow: hidden;
+    clear: both;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) repeat-x;
+}
+
+
+/* 加入购物车按钮 */
+.hightline .btnBar {
+    width: 543px;
+    height: 58px;
+    position: relative;
+    /* background-color: mediumaquamarine; */
+}
+/* 1 */
+.btnBar .goods_ck_info {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 240px;
+    overflow: hidden;
+    color: #666;
+    font-size: 14px;
+
+}
+.btnBar .buynums{
+    padding: 0 3px;
+    color: #C00;
+    font-weight: 700;
+    font-family: '宋体';
+}
+/* 2 */
+.hightline .btnBar .btnsBox {
+    width: 315px;
+    height: 46px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: right;
+    vertical-align: bottom;
+}
+.hightline .btn-buy {
+    width: 171px;
+    height: 44px;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) no-repeat -1px -124px;
+    float: right;
+    border: 0;
+    visibility: visible;
+    cursor: pointer;
+}
+.hightline .btn-fastbuy {
+    float: left;
+    width: 137px;
+    height: 44px;
+    background: url(https://images.s.cn/themes/scn2012/images/skin/pro_detial_icon1.png) no-repeat -1px -447px;
+    border: 0;
+    visibility: visible;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

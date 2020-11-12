@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查看购物车</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <!-- header 头部-->
+    <header>
+        <!-- topnav头部导航 -->
+        <div class="header-topnav">
+            <ul>
+                <li>
+                    <a href="#">欢迎小可爱来到名鞋库</a>
+                    &nbsp;
+                </li>
+                
+            </ul>
+        </div>
+        <div class="header-center">
+            <!-- wrap clfix -->
+            <div class="header-bottom">
+                <!-- logo -->
+                <img src="../img/newlogo.png" alt="">
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="cart_tb_body">
+            <div>
+                <input type="checkbox" id="checkAll">
+            </div>
+            <ul class="cart-list">
+                <!-- <li class="product">
+                    <input type="checkbox" class="choose">
+                    <img src="https://images.s.cn/images/goods/20190930/47618d09dacf3892.jpg" class="pic">
+                    <span class="numbox">衣服</span>
+                    <span class="perPrice">￥999</span>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" class="num">
+                    <span class="plus">+</span>
+                    <span class="perTotalPrice">999</span><span>元</span>
+                    <span class="del">x</span>
+                <li> -->
+            </ul>
+            <div class="zongjia">
+                总价格：<span id="sum"></span>
+            </div>
+        </div>
+    </main>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        document.onselectstart = new Function("event.returnValue=false;"); //阻止选中
+    </script>
+
+
+
+</body>
+
+</html>

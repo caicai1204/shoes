@@ -497,7 +497,7 @@ nav p a:hover {
    height: 100%;
    width: 1905px;
    margin: 0 auto;
-   opacity: 0.6;
+   /* opacity: 0.6; */
 }
 
 /* 狂欢盛典 */
@@ -541,15 +541,14 @@ nav p a:hover {
 .pagemain .hotalbum .hot_map_bottom1,
 .pagemain .hotalbum .hot_map_bottom2,
 .pagemain .hotalbum .hot_map_bottom3{
-    border: 1px solid black;
-    background: yellow;
+    /* border: 1px solid black; */
+    /* background: yellow; */
     position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
     align-content: space-between;
-    opacity: 0.4;
-    /*  */
+    /* opacity: 0.4; */
 }
 .pagemain .hotalbum .hot_map_bottom1,
 .pagemain .hotalbum .hot_map_bottom2,
@@ -579,10 +578,9 @@ nav p a:hover {
     /* 8. */
 .xiaoye .pagemain .jacket_prod_list a{
     display: block;
-    border: 1px solid blue;
-    background: red;
-    opacity: 0.7;
-    /*  */
+    /* border: 1px solid blue; */
+    /* background: red; */
+    /* opacity: 0.7; */
 }
 
     /* 各自属性 */
@@ -798,7 +796,6 @@ nav p a:hover {
     opacity: 0.5;
 }
 
-
 .xiaoye .pagemain .jacket_prod_list{
     width: 990px;
     height: 1813px;  
@@ -815,7 +812,7 @@ nav p a:hover {
     height: 366px;
 }
 /* 运动长裤_商品 */
-.xiaoye .pagemain .pants_prod{
+/* .xiaoye .pagemain .pants_prod{
     height: 2115px;
     background-color: peachpuff;
 }
@@ -824,14 +821,14 @@ nav p a:hover {
     height:2113px;
     border: 1px solid black;
     margin:0 auto;
-}
+} */
 
 /* 10. 跑步鞋 */
 .xiaoye .pagemain .running{
     height: 358px;
 }
 /* 跑步鞋_商品 */
-.xiaoye .pagemain .running_prod{
+/* .xiaoye .pagemain .running_prod{
     height: 1209px;
     background-color: paleturquoise;
 }
@@ -840,14 +837,14 @@ nav p a:hover {
     height:1207px;
     border: 1px solid black;
     margin:0 auto;
-}
+} */
 
 /* 11. 休闲鞋 */
 .xiaoye .pagemain .leisure{
     height: 376px;
 }
 /* 休闲鞋_商品 */
-.xiaoye .pagemain .leisure_prod{
+/* .xiaoye .pagemain .leisure_prod{
     height: 1209px;
     background-color: peru;
 }
@@ -856,7 +853,7 @@ nav p a:hover {
     height:1207px;
     border: 1px solid black;
     margin:0 auto;
-}
+} */
 
 
 /* 12. 童装童鞋 */
@@ -864,7 +861,7 @@ nav p a:hover {
     height: 359px;
 }
 /* 童装童鞋_商品 */
-.xiaoye .pagemain .children_prod{
+/* .xiaoye .pagemain .children_prod{
     height: 605px;
     background-color: palegreen;
 }
@@ -873,14 +870,14 @@ nav p a:hover {
     height:603px;
     border: 1px solid black;
     margin:0 auto;
-}
+} */
 
 /* 13. 包包配件 */
 .xiaoye .pagemain .bags{
     height: 375px;
 }
 /* 包包配件_商品 */
-.xiaoye .pagemain .bags_prod{
+/* .xiaoye .pagemain .bags_prod{
     height: 1209px;
     background-color: powderblue;
 }
@@ -889,27 +886,92 @@ nav p a:hover {
     height:1207px;
     border: 1px solid black;
     margin:0 auto;
+} */
+
+
+
+/* 底部部分，从商标开始 */
+
+
+/* 底部商标 */
+.footbrand{
+    width: 892px;
+    height: 143px;
+    background: #fff;
+    overflow: hidden;
+    padding-bottom: 1px;
+    margin: 0 auto;
+    height: 142px;
 }
+.footbrand a {
+    width: 125px;
+    height: 70px;
+    border: 1px solid #DFDFDF;
+    display: block;
+    float: left;
+    margin: 0 -1px -1px 0;
+    overflow: hidden;
+    position: relative;
+    text-indent: -999px;
+}
+.footbrand a:hover{
+    background: rgb(230, 230, 230);
+    opacity: 0.4;
+}
+.footbrand a span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease 0s;
+    visibility: hidden;
+    cursor: pointer;
+}
+.footbrand .bg1{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat 30px -175px;
+}
+.footbrand .bg2{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -100px -175px;
+}
+.footbrand .bg3{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -705px -330px;
+}
+.footbrand .bg4{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -825px -330px;
+}
+.footbrand .bg5{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -580px -175px;
+}
+.footbrand .bg6{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat 30px -258px;
+}
+.footbrand .bg7{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -580px -255px;
+}
+.footbrand .bg8{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -825px -175px;
+}
+.footbrand .bg9{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -95px -255px;
+}
+.footbrand .bg10{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -458px -330px;
+}
+.footbrand .bg11{
+    background: url(https://images.s.cn/images/css/default_brandwall_bg11.png) no-repeat -210px -175px;
+}
+
+
 
 /* bottom 最下部 */
 .bottom {
     border-bottom: 1px solid #e8e8e8;
-    background: rgb(233, 192, 177);
     box-sizing: border-box;
 }
 
-/* footbrand 底部商标 */
-
-.bottom .bottombrand{
-    width: 892px;
-    height: 143px;
-    margin: 0 auto;
-    margin-top: 10px;
-    border: 1px solid black;
-}
-
 /* prodfenlei 商品分类 */
-
 .bottom .prodfenlei{
     height: 36px;
     width: 990px;
@@ -928,29 +990,80 @@ nav p a:hover {
     padding: 10px 20px;
     font-weight: 100;
 }
-
+/* 详细分类 */
 .bottom .prodfenlei_body{
     width: 990px;
-    height: 185px;
+    height: 184px;
     margin: 0 auto 15px;
     font-family: microsoft yahei;
     overflow: hidden;
-    background-color: darkkhaki;
 }
+.prodfenlei_body dl {
+    width: 245px;
+    height: 184px;
+    float: left;
+    padding-right: 2px;
+}
+.prodfenlei_body dt{
+    height: 99px;
+}
+.prodfenlei_body dt s {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
+.prodfenlei_body dt img{
+    width: 80px;
+    height: 80px;
+    border: 0;
+    margin: 0 auto;
+}
+.prodfenlei_body dd {
+    border-right: 1px dotted #ccc;
+    height: 85px;
+    overflow: hidden;
+    padding: 0 10px 0 15px;
+}
+.prodfenlei_body dd a {
+    width: 34px;
+    color: #555;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    font-size: 12px;
+    text-decoration: none;
+}
+.prodfenlei_body dd a:hover{
+    width: 34px;
+    height: 15px;
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+
+
+/* 返回首页 */
 .bottom .fanhui_wrap{
-    height: 50px;
-    margin: 0 auto;
-    background: #fff;
-    border-bottom:2px solid #ce3c3b;
-}
-.bottom  .fanhui{
     width: 990px;
-    margin: 0 auto;
+    height: 50px;
+    background: #fff;
+    margin: -1px auto ;
+}
+.bottom  #fanhui a {
+    display: block;
+    width: 990px;
 }
 
 
-/* foot */
+
+/* footer */
 footer{
+    border-top:2px solid #ce3c3b;
     padding: 15px;
     background: #f5f5f5;
     border-bottom: 1px solid #e8e8e8;
@@ -1077,3 +1190,6 @@ footer .footer figure:nth-child(2) {
     border-top: 1px solid #f8f8f8;
     border-left: 1px solid #f8f8f8;
 }
+
+
+
